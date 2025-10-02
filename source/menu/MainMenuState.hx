@@ -73,10 +73,10 @@ class MainMenuState extends FlxState
 			name: "Dbg: Test Dialogue Box",
 			selectedFunction: function():Void
 			{
-				var box = new CtDialogueBox({});
+				var box = new CtDialogueBox();
 				add(box);
-				box.loadDialogueFiles(['test/dia_test']);
-				box.playDialogue();
+				box.loadDialogueFiles(['test/dia_test_real']);
+				box.openBox();
 			}
 		});
 		#end

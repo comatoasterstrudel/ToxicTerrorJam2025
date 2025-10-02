@@ -15,6 +15,18 @@ class InitState extends FlxState
 		// disable antialiasing
 		FlxSprite.defaultAntialiasing = false;
 		
+		// set the dialogue box style
+		CtDialogueBox.defaultSettings = {
+			fontSize: 25,
+			textColor: FlxColor.WHITE,
+			textOffset: new FlxPoint(20, 320),
+			boxImgPath: 'dialogueBg',
+			pressedAcceptFunction: function():Bool
+			{
+				return FlxG.mouse.justReleased;
+			}
+		};
+		
 		new FlxTimer().start(.1, function(f):Void{
 			leave();			
 		});
