@@ -1,6 +1,11 @@
 {
   "dependencies": [
     {
+      "name": "flixel",
+      "type": "haxelib",
+      "version": "6.1.0"
+    },
+    {
       "name": "flixel-addons",
       "type": "haxelib",
       "version": "3.2.3"
