@@ -39,7 +39,7 @@ class MainMenuState extends FlxState
 			{
 				Sys.exit(0);
 			}
-		}
+		},
 		#end
 	];
 
@@ -67,6 +67,19 @@ class MainMenuState extends FlxState
 
 		gameLogo = new FlxSprite(10, 10).loadGraphic('assets/images/menu/logo.png');
 		add(gameLogo);
+		
+		#if debug
+		menuOptions.push({
+			name: "Dbg: Test Dialogue Box",
+			selectedFunction: function():Void
+			{
+				var box = new CtDialogueBox({});
+				add(box);
+				box.loadDialogueFiles(['test/dia_test']);
+				box.playDialogue();
+			}
+		});
+		#end
 		
 		menuTexts = new FlxSpriteGroup();
 		add(menuTexts);
