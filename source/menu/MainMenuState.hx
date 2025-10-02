@@ -53,6 +53,11 @@ class MainMenuState extends FlxState
 	 */
 	var menuBg:FlxSprite;
 	
+	/**
+	 * the logo of the game
+	 */
+	var gameLogo:FlxSprite;
+	
 	override public function create()
 	{
 		super.create();
@@ -60,6 +65,9 @@ class MainMenuState extends FlxState
 		menuBg.setGraphicSize(FlxG.width, FlxG.height);
 		add(menuBg);
 
+		gameLogo = new FlxSprite(10, 10).loadGraphic('assets/images/menu/logo.png');
+		add(gameLogo);
+		
 		menuTexts = new FlxSpriteGroup();
 		add(menuTexts);
 
@@ -67,7 +75,7 @@ class MainMenuState extends FlxState
 		{
 			var menuOption = menuOptions[i];
 
-			var menuText = new FlxText(10, 10 + (40 * i), 0, menuOption.name, 16);
+			var menuText = new FlxText(10, gameLogo.y + gameLogo.height + (40 * i), 0, menuOption.name, 16);
 			menuText.ID = i;
 			menuTexts.add(menuText);
 		}
