@@ -1,7 +1,8 @@
-package;
+package play;
 
-import flixel.FlxState;
-
+/**
+ * this is the class that contains the actual gameplay. lol. like rooms and stuff.
+ */
 class PlayState extends FlxState
 {
 	override public function create()
