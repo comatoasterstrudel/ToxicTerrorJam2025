@@ -1,6 +1,13 @@
 {
   "dependencies": [
     {
+      "name": "ctDialogueBox",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/comatoasterstrudel/ctDialogueBox"
+    },
+    {
       "name": "flixel",
       "type": "haxelib",
       "version": "5.8.0"

@@ -1,4 +1,5 @@
 import InitState;
+import ctDialogueBox.ctdb.CtDialogueBox;
 import flixel.FlxG;
 import flixel.FlxGame;
 import flixel.FlxSprite;
