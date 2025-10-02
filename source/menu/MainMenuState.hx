@@ -15,14 +15,14 @@ class MainMenuState extends FlxState
 			name: "Start Game",
 			selectedFunction: function():Void
 			{
-				trace('nuts');
+				FlxG.switchState(new PlayState());
 			}
 		},
 		{
 			name: "Load Game",
 			selectedFunction: function():Void
 			{
-				trace('or something');
+				FlxG.switchState(new PlayState());
 			}
 		},
 		{
