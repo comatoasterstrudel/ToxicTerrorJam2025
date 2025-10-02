@@ -20,6 +20,7 @@ class InitState extends FlxState
 			fontSize: 25,
 			textColor: FlxColor.WHITE,
 			textOffset: new FlxPoint(20, 320),
+			textFieldWidth: FlxG.width - 20,
 			boxImgPath: 'dialogueBg',
 			pressedAcceptFunction: function():Bool
 			{
