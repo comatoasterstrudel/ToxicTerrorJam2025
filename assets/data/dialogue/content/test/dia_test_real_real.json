@@ -13,5 +13,15 @@
 		"speed": 0.03,
 		"dialogue": "im allowed to talk also please",
 		"actor": "elianna"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "IM HERE ALSO DO NOT FORGET ME !",
+		"actor": "octavia"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "damn my bad bug mother",
+		"actor": "xiaomei"
 	}
 ]

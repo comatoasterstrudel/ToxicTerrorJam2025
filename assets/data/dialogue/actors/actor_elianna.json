@@ -4,5 +4,6 @@
 	"textColor": [255, 255, 255],
 	"nameBoxTextColor": [255, 255, 255],
 	"portraitPrefix": "elianna",
-	"portraitRight": true
+	"portraitRight": true,
+	"customNameBoxImgPath": "elianna"
 }

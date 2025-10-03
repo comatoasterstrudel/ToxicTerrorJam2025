@@ -1,0 +1,9 @@
+{
+    "name": "octavia",
+	"vanityName": "Octavia",
+	"textColor": [255, 255, 255],
+	"nameBoxTextColor": [255, 255, 255],
+	"portraitPrefix": "octavia",
+	"portraitRight": true,
+	"customNameBoxImgPath": "octavia"
+}
