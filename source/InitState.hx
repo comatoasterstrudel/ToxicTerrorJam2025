@@ -30,7 +30,7 @@ class InitState extends FlxState
 			nameBoxImgPath: "nameBox",
 			nameBoxLeftEndImgPath: "nameBoxLeftEnd",
 			nameBoxRightEndImgPath: "nameBoxRightEnd",
-			nameBoxToPortraitPosition: true,
+			nameBoxFollowType: Opposite,
 			pressedAcceptFunction: function():Bool
 			{
 				return FlxG.mouse.justReleased;
