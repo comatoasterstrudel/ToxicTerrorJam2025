@@ -2,12 +2,14 @@
 	{
 		"speed": 0.03,
 		"dialogue": "hello i am Xiaomei i am speaking",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "i should talk longer to make sure the word wrapping works on this textbox ahaha aha haha ha haha hahahaha hahah aha",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
@@ -22,6 +24,7 @@
 	{
 		"speed": 0.03,
 		"dialogue": "damn my bad bug mother",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"portrait": "neutral"
 	}
 ]

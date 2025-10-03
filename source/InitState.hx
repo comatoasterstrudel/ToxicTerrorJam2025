@@ -31,11 +31,18 @@ class InitState extends FlxState
 			nameBoxLeftEndImgPath: "nameBoxLeftEnd",
 			nameBoxRightEndImgPath: "nameBoxRightEnd",
 			nameBoxFollowType: Opposite,
+			portraitOnTopOfBox: false,
+			portraitOffsetLeft: new FlxPoint(-380, -100),
 			pressedAcceptFunction: function():Bool
 			{
 				return FlxG.mouse.justReleased;
 			}
 		};
+		
+		// fullscreen if necessary
+		#if startFullScreen
+		FlxG.fullscreen = true;
+		#end
 		
 		new FlxTimer().start(.1, function(f):Void{
 			leave();			

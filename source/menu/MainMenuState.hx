@@ -15,6 +15,7 @@ class MainMenuState extends FlxState
 			name: "Start Game",
 			selectedFunction: function():Void
 			{
+				PlayState.loadRoom('intro_car');
 				FlxG.switchState(new PlayState());
 			}
 		},
