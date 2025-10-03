@@ -19,9 +19,14 @@ class InitState extends FlxState
 		CtDialogueBox.defaultSettings = {
 			fontSize: 25,
 			textColor: FlxColor.WHITE,
-			textOffset: new FlxPoint(20, 320),
-			textFieldWidth: FlxG.width - 20,
-			boxImgPath: 'dialogueBg',
+			boxPosition: new FlxPoint(0, 220),
+			textOffset: new FlxPoint(20, 50),
+			textFieldWidth: 1222 - 20,
+			boxImgPath: 'dialogueBox',
+			nameBoxImgPath: "nameBox",
+			nameBoxLeftEndImgPath: "nameBoxLeftEnd",
+			nameBoxRightEndImgPath: "nameBoxRightEnd",
+			nameBoxToPortraitPosition: true,
 			pressedAcceptFunction: function():Bool
 			{
 				return FlxG.mouse.justReleased;

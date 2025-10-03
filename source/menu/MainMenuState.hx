@@ -63,6 +63,7 @@ class MainMenuState extends FlxState
 		super.create();
 		menuBg = new FlxSprite().loadGraphic('assets/images/menu/bg.png');
 		menuBg.setGraphicSize(FlxG.width, FlxG.height);
+		menuBg.screenCenter();
 		add(menuBg);
 
 		gameLogo = new FlxSprite(10, 10).loadGraphic('assets/images/menu/logo.png');
@@ -75,7 +76,7 @@ class MainMenuState extends FlxState
 			{
 				var box = new CtDialogueBox();
 				add(box);
-				box.loadDialogueFiles(['test/dia_test_real']);
+				box.loadDialogueFiles(['test/dia_test_real_real']);
 				box.openBox();
 			}
 		});

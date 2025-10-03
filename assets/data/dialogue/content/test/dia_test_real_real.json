@@ -1,0 +1,17 @@
+[
+	{
+		"speed": 0.03,
+		"dialogue": "hello i am Xiaomei i am speaking",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "i should talk longer to make sure the word wrapping works on this textbox ahaha aha haha ha haha hahahaha hahah aha",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "im allowed to talk also please",
+		"actor": "elianna"
+	}
+]
