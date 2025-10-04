@@ -35,8 +35,14 @@ class PlayState extends FlxState
 	 */
 	var camDialogue:FlxCamera;
 
+	/**
+	 * the dialogue box!! it plays.. dialogue!!
+	 */
 	var dialogueBox:CtDialogueBox;
 
+	/**
+	 * the object used to display the object frames during dialogue
+	 */
 	var cutsceneFrame:CutsceneFrame;
 	
 	public static var dialogueOnComplete:Void->Void = null;
@@ -98,6 +104,7 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 	}
+
 	/**
 	 * call this function to load the hscript file !! yay
 	 */
@@ -158,6 +165,12 @@ class PlayState extends FlxState
 		}
 	}
 
+	/**
+	 * call this to play a transition and move to a different room
+	 * @param newRoom the name of the room you want to go to
+	 * @param transitionType the type of transition to do
+	 * @param transitionTime how long the transition should be
+	 */
 	function changeRoom(newRoom:String, transitionType:String = 'fade', transitionTime:Float = 1)
 	{
 		doTransition(transitionType, 'out', transitionTime, function():Void
@@ -167,6 +180,10 @@ class PlayState extends FlxState
 		});
 	}
 
+	/**
+	 * call this to load a new room
+	 * @param newRoom the room to load
+	 */
 	public static function loadRoom(newRoom:String):Void
 	{
 		lastRoom = curRoom;
