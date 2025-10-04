@@ -34,7 +34,7 @@ function create():Void{
 	add(house);
 
 	var garage = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/garage.png');
-	garage.scrollFactor.set(.85, 1);
+	garage.scrollFactor.set(.87, 1);
 	garage.screenCenter();
 	garage.x = 0;
 	garage.camera = camRoom;
