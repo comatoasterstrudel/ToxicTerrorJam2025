@@ -1,0 +1,49 @@
+[
+	{
+		"speed": 0.03,
+		"dialogue": "wow elianna , this orchard you took me to sure is beautiful !",
+		"actor": "xiaomei",
+		"portrait": "neutral"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "ikr ! btw why are we being mischaracterized !?!?",
+		"actor": "elianna"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "dont worry about that OMG LOOK WHAT I FOUND",
+		"actor": "xiaomei",
+		"portrait": "neutral"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "ISNT IT BEAUTIFUL?",
+		"actor": "xiaomei",
+		"events": ["changeFrame_testorchard_testapple"],
+		"portrait": "neutral"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "ew put that thang away",
+		"actor": "elianna"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "idk how sorry",
+		"actor": "xiaomei",
+		"portrait": "neutral"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "ill just do it for you you fucking imbecile",
+		"actor": "elianna",
+		"events": ["hideFrame"]
+	}, 
+	{
+		"speed": 0.03,
+		"dialogue": "thanks",
+		"actor": "xiaomei",
+		"portrait": "neutral"
+	}
+]

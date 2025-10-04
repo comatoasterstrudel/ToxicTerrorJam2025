@@ -81,6 +81,14 @@ class MainMenuState extends FlxState
 				box.openBox();
 			}
 		});
+		menuOptions.push({
+			name: "Dbg: Test Frame Room",
+			selectedFunction: function():Void
+			{
+				PlayState.loadRoom('test_frames');
+				FlxG.switchState(new PlayState());
+			}
+		});
 		#end
 		
 		menuTexts = new FlxSpriteGroup();

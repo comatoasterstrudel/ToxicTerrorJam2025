@@ -8,7 +8,7 @@ class PlayState extends FlxState
 	/**
 	 * which room is currently loaded and will be played when this state is opened
 	 */
-	public static var curRoom:String = 'testroom';
+	public static var curRoom:String = 'test_placeholder';
 
 	/**
 	 * the hscript file tied to this room
@@ -32,6 +32,8 @@ class PlayState extends FlxState
 
 	var dialogueBox:CtDialogueBox;
 
+	var cutsceneFrame:CutsceneFrame;
+	
 	public static var dialogueOnComplete:Void->Void = null;
 	
 	override public function create()
@@ -59,6 +61,25 @@ class PlayState extends FlxState
 				dialogueOnComplete();
 		};
 
+		trueSettings.onEvent = function(eventName:String):Void
+		{
+			var eventSplit = eventName.split('_');
+
+			switch (eventSplit[0])
+			{
+				case 'changeFrame':
+					cutsceneFrame.changeFrame(eventSplit[1], eventSplit[2]);
+				case 'hideFrame':
+					cutsceneFrame.hideFrame();
+				case 'playSound':
+					FlxG.sound.play('assets/sounds/cutscene/' + eventSplit[1] + '.ogg');
+			}
+		};
+
+		cutsceneFrame = new CutsceneFrame();
+		cutsceneFrame.camera = camDialogue;
+		add(cutsceneFrame);
+		
 		dialogueBox = new CtDialogueBox(trueSettings);
 		dialogueBox.camera = camDialogue;
 		add(dialogueBox);
