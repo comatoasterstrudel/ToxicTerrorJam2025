@@ -1,4 +1,7 @@
 function create():Void{    
+	FlxG.sound.playMusic('assets/sounds/rooms/crickets.ogg', 0);
+	FlxG.sound.music.fadeIn(3, 0, 1);
+	
     var beautifulSky:FlxSprite = new FlxSprite();
     beautifulSky.makeGraphic(FlxG.width, FlxG.height, 0xFF0D3C3C);
     beautifulSky.camera = camRoom;
@@ -48,12 +51,13 @@ function create():Void{
     
     doTransition('fade', 'in', 4, function():Void{
         new FlxTimer().start(2.8, function(f):Void{
+			FlxG.sound.music.fadeOut(3, .3);
             doTransition('fade', 'out', 3, function():Void{
                 dialogueBox.loadDialogueFiles(['intro/dia_intro_housefrontscene']);
                 dialogueBox.openBox();
                 
                 PlayState.dialogueOnComplete = function():Void{
-                    changeRoom('intro_testroom', 'none', 0);
+					changeRoom('test_placeholder', 'none', 0);
                 };
             });
         });

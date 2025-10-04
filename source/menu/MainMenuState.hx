@@ -89,6 +89,14 @@ class MainMenuState extends FlxState
 				FlxG.switchState(new PlayState());
 			}
 		});
+		menuOptions.push({
+			name: "Dbg: front of house scene",
+			selectedFunction: function():Void
+			{
+				PlayState.loadRoom('intro_housefront');
+				FlxG.switchState(new PlayState());
+			}
+		});
 		#end
 		
 		menuTexts = new FlxSpriteGroup();

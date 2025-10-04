@@ -1,4 +1,10 @@
+var leaving:Bool = false;
+var carWindow:FlxSprite;
+
 function create():Void{    
+	FlxG.sound.playMusic('assets/sounds/rooms/cardriving.ogg', 0);
+	FlxG.sound.music.fadeIn(3, 0, 1);
+    
     var beautifulSky:FlxSprite = new FlxSprite();
     beautifulSky.makeGraphic(FlxG.width, FlxG.height, 0xFFCEFFFF);
     beautifulSky.camera = camRoom;
@@ -19,8 +25,8 @@ function create():Void{
     powerLines.velocity.x = -500;
     add(powerLines);
     
-    var carWindow = new FlxSprite().loadGraphic('assets/images/rooms/intro_car/carWindow.png');
-	carWindow.setGraphicSize(FlxG.width + 10, FlxG.height);
+	carWindow = new FlxSprite().loadGraphic('assets/images/rooms/intro_car/carWindow.png');
+	carWindow.setGraphicSize(FlxG.width + 10, FlxG.height + 40);
 	carWindow.screenCenter();
     carWindow.camera = camRoom;
     add(carWindow);
@@ -30,7 +36,33 @@ function create():Void{
 		dialogueBox.openBox();
         
         PlayState.dialogueOnComplete = function():Void{
+			leaving = true;
+			FlxG.sound.music.fadeOut(3, 0);
             changeRoom('intro_housefront', 'fade', 3);
         };
-    });
+	});   
+	doBump();
+}
+
+function doBump():Void
+{
+	if (!leaving)
+	{
+		new FlxTimer().start(FlxG.random.float(5, 11), function(f):Void
+		{
+			FlxG.sound.play('assets/sounds/rooms/carbump.ogg', FlxG.random.float(.3, 1)).pitch = FlxG.random.float(.8, 1.2);
+
+			var ogY = carWindow.y;
+
+			carWindow.y += (FlxG.random.bool(50)) ? FlxG.random.float(5, 20) : FlxG.random.float(-20, -5);
+
+			FlxTween.tween(carWindow, {y: ogY}, .5, {
+				ease: FlxEase.elasticOut,
+				onComplete: function(f):Void
+				{
+					doBump();
+				}
+			});
+		});
+	}
 }

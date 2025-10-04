@@ -67,12 +67,14 @@ class PlayState extends FlxState
 
 			switch (eventSplit[0])
 			{
-				case 'changeFrame':
+				case 'changeFrame': // bg:String, contents:String
 					cutsceneFrame.changeFrame(eventSplit[1], eventSplit[2]);
 				case 'hideFrame':
 					cutsceneFrame.hideFrame();
-				case 'playSound':
-					FlxG.sound.play('assets/sounds/cutscene/' + eventSplit[1] + '.ogg');
+				case 'playSound': // path
+					FlxG.sound.play(eventSplit[1]);
+				case 'fadeMusic': // duration, volume
+					FlxG.sound.music.fadeIn(Std.parseFloat(eventSplit[1]), FlxG.sound.music.volume, Std.parseFloat(eventSplit[2]));
 			}
 		};
 

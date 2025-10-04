@@ -71,7 +71,46 @@
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "I brush it off and make my way into the garage, the sound of my footsteps echoing off the tin walls. I reach the back door.",
+		"dialogue": "I brush it off and make my way into the garage, the sound of my footsteps echoing off the tin walls. I reach the back door, staring at it for a moment before I reach for the handle.",
+		"actor": "xiaomei",
+		"events": ["fadeMusic_1.5_0", "playSound_assets/sounds/rooms/entergarage.ogg"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I place my hand around it and jiggle it, but it's locked.",
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/doorjiggle.ogg"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "What…?",
 		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I would've thought Elianna would have kept it unlocked for me, but I guess not.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "They must still keep the spare key around here somewhere, right? I instinctively look in the place it was kept when we were in highschool, under the crate of old tennis balls and broken rackets.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I lifted up the dusty milk crate, pawing around for a moment before feeling the cold steel of the key. I grasped it and pulled it out, letting go of the crate and my hand coming away caked in dust.",
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/keyget.ogg"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I brush the layer of dust onto my coat and bring my attention back to the door.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I fumble with the key before rotating it the right way and sliding it into the keyhole. The door opens with a click and I push it open. It's surprisingly heavier than I remember.",
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/garagebackdooropen.ogg"]
 	}
 ]

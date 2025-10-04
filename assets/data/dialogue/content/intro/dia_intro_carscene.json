@@ -14,7 +14,8 @@
 	{
 		"speed": 0.03,
 		"dialogue": "yeah, maybe but... She hasn't messaged me back for a week, and it's worrying me.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
@@ -35,12 +36,14 @@
 		"speed": 0.03,
 		"dialogue": "What do you think will happen?",
 		"actor": "xiaomei",
-		"portrait": "neutral"
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "...",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
@@ -51,34 +54,40 @@
 		"speed": 0.03,
 		"dialogue": "yeah, I know.",
 		"actor": "xiaomei",
-		"portrait": "neutral"
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Oh come on, don't say it like that.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Like what?",
 		"actor": "xiaomei",
-		"portrait": "neutral"
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "You're being bitchy about it.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "I'm not being bitchy! I just-",
 		"actor": "xiaomei",
-		"portrait": "neutral"	
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "She's MY mom, Mei. I care about her and if something happened while I was away I would be inconsolable.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
@@ -89,7 +98,8 @@
 		"speed": 0.03,
 		"dialogue": "Okay, okay, I'll be down there in 2 hours.",
 		"actor": "xiaomei",
-		"portrait": "neutral"	
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
@@ -100,7 +110,8 @@
 	{
 		"speed": 0.03,
 		"dialogue": "Thanks, Mei. I'll try to be there as soon as I can as well.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
@@ -111,17 +122,20 @@
 		"speed": 0.03,
 		"dialogue": "heh... I don't know if you'll be as good as Octavia on that front.",
 		"actor": "xiaomei",
-		"portrait": "neutral"	
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "ohhh shut up!! I'm hanging up now, love you.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "yep, love you too.",
 		"actor": "xiaomei",
-		"portrait": "neutral"	
+		"portrait": "neutral",
+		"events": ["hideFrame"]
 	}
 ]
