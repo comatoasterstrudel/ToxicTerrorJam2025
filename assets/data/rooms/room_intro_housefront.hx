@@ -27,14 +27,14 @@ function create():Void{
 	add(ground);
 
 	var house = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/house.png');
-	house.scrollFactor.set(.9, 1);
+	house.scrollFactor.set(.87, 1);
 	house.screenCenter();
 	house.x = 0;
 	house.camera = camRoom;
 	add(house);
 
 	var garage = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/garage.png');
-	garage.scrollFactor.set(.87, 1);
+	garage.scrollFactor.set(.9, 1);
 	garage.screenCenter();
 	garage.x = 0;
 	garage.camera = camRoom;
