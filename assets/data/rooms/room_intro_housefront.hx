@@ -6,28 +6,45 @@ function create():Void{
     add(beautifulSky);
     
     var stars = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/stars.png');
-    stars.scrollFactor.set(0, 0);
-	stars.setGraphicSize(FlxG.width + 10, stars.height);
+	stars.scrollFactor.set(0, 0);
 	stars.screenCenter();
-    stars.y = FlxG.height - stars.height;
+	stars.x = 0;
     stars.camera = camRoom;
     add(stars);
     
     var hills = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/hills.png');
-    hills.scrollFactor.set(1, .5);
-	hills.setGraphicSize(FlxG.width + 10, hills.height);
+	hills.scrollFactor.set(.5, 1);
 	hills.screenCenter();
-    hills.y = FlxG.height - hills.height;
-    hills.y += 200;
+	hills.x = 0;
     hills.camera = camRoom;
     add(hills);
     
-    var foreground = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/foreground.png');
-	foreground.setGraphicSize(FlxG.width + 10, foreground.height);
-	foreground.screenCenter();
-    foreground.y = FlxG.height - foreground.height;
-    foreground.camera = camRoom;
-    add(foreground);
+	var ground = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/ground.png');
+	ground.scrollFactor.set(.8, 1);
+	ground.screenCenter();
+	ground.x = 0;
+	ground.camera = camRoom;
+	add(ground);
+
+	var house = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/house.png');
+	house.scrollFactor.set(.9, 1);
+	house.screenCenter();
+	house.x = 0;
+	house.camera = camRoom;
+	add(house);
+
+	var garage = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/garage.png');
+	garage.scrollFactor.set(.85, 1);
+	garage.screenCenter();
+	garage.x = 0;
+	garage.camera = camRoom;
+	add(garage);
+
+	var meicar = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/meicar.png');
+	meicar.screenCenter();
+	meicar.x = 0;
+	meicar.camera = camRoom;
+	add(meicar);
     
     doTransition('fade', 'in', 4, function():Void{
         new FlxTimer().start(2.8, function(f):Void{
@@ -42,5 +59,5 @@ function create():Void{
         });
     });
     
-    FlxTween.tween(camRoom.scroll, {y: -440}, 6, {ease: FlxEase.quartInOut});
+	FlxTween.tween(camRoom.scroll, {x: 450}, 6, {ease: FlxEase.quartInOut});
 }
