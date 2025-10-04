@@ -1,4 +1,5 @@
-function create():Void{    
+function create(lastRoom:String):Void
+{
 	FlxG.sound.playMusic('assets/sounds/rooms/crickets.ogg', 0);
 	FlxG.sound.music.fadeIn(3, 0, 1);
 	

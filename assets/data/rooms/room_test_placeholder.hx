@@ -1,3 +1,4 @@
-function create():Void{
+function create(lastRoom:String):Void
+{
     //
 }

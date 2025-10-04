@@ -11,6 +11,11 @@ class PlayState extends FlxState
 	public static var curRoom:String = 'test_placeholder';
 
 	/**
+	 * the last room that was entered
+	 */
+	public static var lastRoom:String = '';
+	
+	/**
 	 * the hscript file tied to this room
 	 */
 	var roomScript:HaxeScript;
@@ -120,7 +125,7 @@ class PlayState extends FlxState
 		roomScript.setVariable('changeRoom', changeRoom);
 		roomScript.setVariable('doTransition', doTransition);
 
-		roomScript.executeFunc('create', []);
+		roomScript.executeFunc('create', [lastRoom]);
 	}
 
 	function doTransition(transitionType:String = 'fade', inOut:String = 'in', transitionTime:Float = 1, onComplete:Void->Void = null):Void
@@ -164,7 +169,8 @@ class PlayState extends FlxState
 
 	public static function loadRoom(newRoom:String):Void
 	{
+		lastRoom = curRoom;
 		curRoom = newRoom;
-		trace('Loaded new room! $newRoom');
+		trace('Loaded new room! $newRoom Last room: $lastRoom');
 	}
 }
