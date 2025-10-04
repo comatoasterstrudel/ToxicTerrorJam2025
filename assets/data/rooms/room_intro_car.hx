@@ -20,11 +20,13 @@ function create():Void{
     add(powerLines);
     
     var carWindow = new FlxSprite().loadGraphic('assets/images/rooms/intro_car/carWindow.png');
+	carWindow.setGraphicSize(FlxG.width + 10, FlxG.height);
+	carWindow.screenCenter();
     carWindow.camera = camRoom;
     add(carWindow);
     
     doTransition('fade', 'in', 3, function():Void{
-        dialogueBox.loadDialogueFiles(['intro/carscene']);
+		dialogueBox.loadDialogueFiles(['intro/dia_intro_carscene']);
 		dialogueBox.openBox();
         
         PlayState.dialogueOnComplete = function():Void{

@@ -105,8 +105,9 @@ class PlayState extends FlxState
 		switch (transitionType)
 		{
 			case 'fade':
-				var tranSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+				var tranSprite = new FlxSprite().makeGraphic(FlxG.width + 20, FlxG.height + 20, FlxColor.BLACK);
 				tranSprite.camera = camTransition;
+				tranSprite.screenCenter();
 				add(tranSprite);
 
 				if (inOut == 'in')

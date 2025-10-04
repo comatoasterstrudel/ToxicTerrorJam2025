@@ -17,15 +17,13 @@ class InitState extends FlxState
 		
 		// set the dialogue box style
 		CtDialogueBox.defaultSettings = {
-			font: "assets/fonts/RailwayGank-DEMO.otf",
-			nameBoxFont: "assets/fonts/RailwayGank-DEMO.otf",
-			fontSize: 55,
-			nameBoxFontSize: 70,
+			fontSize: 40,
+			nameBoxFontSize: 50,
 			textColor: FlxColor.WHITE,
 			textRows: 7,
 			boxPosition: new FlxPoint(0, 220),
 			textOffset: new FlxPoint(40, 50),
-			textFieldWidth: 1222 - 40,
+			textFieldWidth: 1222 - 60,
 			boxImgPath: 'dialogueBox',
 			nameBoxImgPath: "nameBox",
 			nameBoxLeftEndImgPath: "nameBoxLeftEnd",
