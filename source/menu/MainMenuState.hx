@@ -97,6 +97,14 @@ class MainMenuState extends FlxState
 				FlxG.switchState(new PlayState());
 			}
 		});
+		menuOptions.push({
+			name: "Dbg: test interactables",
+			selectedFunction: function():Void
+			{
+				PlayState.loadRoom('test_interactables');
+				FlxG.switchState(new PlayState());
+			}
+		});
 		#end
 		
 		menuTexts = new FlxSpriteGroup();

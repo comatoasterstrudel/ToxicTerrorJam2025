@@ -1,6 +1,7 @@
 package script;
 
 import flixel.graphics.atlas.FlxAtlas;
+import play.InteractableObject;
 
 class ScriptSupport {
 	public static function setScriptDefaultVars(script:HaxeScript, mod:String, settings:Dynamic)
@@ -86,6 +87,7 @@ class ScriptSupport {
 		script.setVariable("FlxTextBorderStyle", FlxTextBorderStyle);
 		script.setVariable("PlayState", PlayState);
 		script.setVariable("FlxAtlasFrames", FlxAtlasFrames);
+		script.setVariable("InteractableObject", InteractableObject);
 		script.mod = mod;
 	}
 

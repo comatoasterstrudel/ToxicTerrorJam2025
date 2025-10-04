@@ -15,22 +15,26 @@
 		"speed": 0.03,
 		"dialogue": "yeah, maybe but... She hasn't messaged me back for a week, and it's worrying me.",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "She's been good with messaging and calling for the past year.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "I mean, I've been gone for a month and I don't know what she's been up to and I...",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "I just don't want something bad to happen.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
@@ -43,12 +47,14 @@
 		"speed": 0.03,
 		"dialogue": "...",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "It... it could really be anything! She's not always in her right mind, you know?",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
@@ -61,6 +67,7 @@
 		"speed": 0.03,
 		"dialogue": "Oh come on, don't say it like that.",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
@@ -74,6 +81,7 @@
 		"speed": 0.03,
 		"dialogue": "You're being bitchy about it.",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
@@ -87,12 +95,14 @@
 		"speed": 0.03,
 		"dialogue": "She's MY mom, Mei. I care about her and if something happened while I was away I would be inconsolable.",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Especially since I'm the only one who's been keeping an eye on her.",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
@@ -111,12 +121,14 @@
 		"speed": 0.03,
 		"dialogue": "Thanks, Mei. I'll try to be there as soon as I can as well.",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "I could make us some homemade deep dish pizza, like mom did for us when we were little!",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	},
 	{
 		"speed": 0.03,
@@ -129,6 +141,7 @@
 		"speed": 0.03,
 		"dialogue": "ohhh shut up!! I'm hanging up now, love you.",
 		"actor": "elianna",
+		"portrait": "neutral",
 		"events": ["changeFrame_car_phone"]
 	},
 	{

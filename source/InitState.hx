@@ -31,6 +31,7 @@ class InitState extends FlxState
 			nameBoxFollowType: Opposite,
 			portraitOnTopOfBox: false,
 			portraitOffsetLeft: new FlxPoint(-380, -100),
+			portraitOffsetRight: new FlxPoint(380, -100),
 			pressedAcceptFunction: function():Bool
 			{
 				return FlxG.mouse.justReleased;
