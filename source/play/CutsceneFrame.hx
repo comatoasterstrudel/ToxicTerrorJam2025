@@ -32,6 +32,7 @@ class CutsceneFrame extends FlxSpriteGroup
         frameOutline = new FlxSprite().loadGraphic('assets/images/cutsceneFrames/frame.png');
         add(frameOutline);
         
+
         hideFrame();
     }
     

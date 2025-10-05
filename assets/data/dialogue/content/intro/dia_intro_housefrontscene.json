@@ -2,7 +2,8 @@
 	{
 		"speed": 0.03,
 		"dialogue": "The teeth of the autumn air nipped at me as I stepped out of my car, shivering as a large gust of wind hit me in the face.",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"events": ["changeFrame_meioutside_nothing"]
 	},
 	{
 		"speed": 0.03,
@@ -73,7 +74,7 @@
 		"speed": 0.03,
 		"dialogue": "I brush it off and make my way into the garage, the sound of my footsteps echoing off the tin walls.",
 		"actor": "xiaomei",
-		"events": ["fadeMusic_1.5_0", "playSound_assets/sounds/rooms/entergarage.ogg"]
+		"events": ["fadeMusic_1.5_0", "playSound_assets/sounds/rooms/entergarage.ogg", "hideFrame"]
 	},
 	{
 		"speed": 0.03,

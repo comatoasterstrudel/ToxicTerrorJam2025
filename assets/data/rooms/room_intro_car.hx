@@ -4,7 +4,7 @@ var carWindow:FlxSprite;
 function create(lastRoom:String):Void
 {    
 	FlxG.sound.playMusic('assets/sounds/rooms/cardriving.ogg', 0);
-	FlxG.sound.music.fadeIn(3, 0, 1);
+	FlxG.sound.music.fadeIn(3, 0, .7);
     
     var beautifulSky:FlxSprite = new FlxSprite();
     beautifulSky.makeGraphic(FlxG.width, FlxG.height, 0xFFCEFFFF);
@@ -51,7 +51,7 @@ function doBump():Void
 	{
 		new FlxTimer().start(FlxG.random.float(5, 11), function(f):Void
 		{
-			FlxG.sound.play('assets/sounds/rooms/carbump.ogg', FlxG.random.float(.3, 1)).pitch = FlxG.random.float(.8, 1.2);
+			FlxG.sound.play('assets/sounds/rooms/carbump.ogg', FlxG.random.float(.1, .5)).pitch = FlxG.random.float(.8, 1.2);
 
 			var ogY = carWindow.y;
 
