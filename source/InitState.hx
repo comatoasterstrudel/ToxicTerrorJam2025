@@ -38,6 +38,9 @@ class InitState extends FlxState
 			}
 		};
 		
+		// preload the font really quick so you dont have to do it later
+		CtDialogueBox.preloadFont(CtDialogueBox.defaultSettings.font, CtDialogueBox.defaultSettings.fontSize);
+		
 		// fullscreen if necessary
 		#if startFullScreen
 		FlxG.fullscreen = true;

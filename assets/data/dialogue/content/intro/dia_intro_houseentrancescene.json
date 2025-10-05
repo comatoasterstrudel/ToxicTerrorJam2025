@@ -6,7 +6,57 @@
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "It feels surreal. I haven’t been inside this house since I left for college. It feels like stepping into a memory. where you’ve gotten older, but your surroundings are the same.",
+		"dialogue": "It feels surreal. I haven't been inside this house since I left for college. It feels like stepping into a memory. where you've gotten older, but your surroundings are the same.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It's almost frighteningly the same.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "The red floral wallpaper is still the same rusty tone, the appliances are all the same, and you can hear the sound of the fridge's ice machine that always scared me as a kid.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Everything was a bit duller, but it's hard to tell if that's because of the age of the home or of me.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "And it's still so clean. The sink is spotless, the light above it shining against its silver basin.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "The countertops are cleared of clutter and trash. All dishes are put in their respective cupboards and the spice rack is orderly.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I never really knew if Octavia prided herself on her cleaning or if it was just something she did. Me and Elly were usually just left home alone, but when Octavia was there, she was always cleaning.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Doing the dishes, vacuuming, scrubbing the counter and windows, and hell even dusting. Who the hell dusts things?",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I walked further into the home, a sense of confusion overtaking my reminiscing. There were zero signs of life in the house, quiet besides the sounds of my footsteps and the hum of the fridge.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "The only lights on are the ones above the sink and stove, as well as the one above the staircase.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I walk through the threshold between the kitchen and the rest of the house, going to investigate the stair light and hopefully find Elly and Octavia.",
 		"actor": "xiaomei"
 	}
 ]
