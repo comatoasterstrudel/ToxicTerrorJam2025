@@ -7,24 +7,28 @@ function create(lastRoom:String):Void
     beautifulSky.makeGraphic(FlxG.width, FlxG.height, 0xFF0D3C3C);
     beautifulSky.camera = camRoom;
     beautifulSky.scrollFactor.set(0, 0);
-    add(beautifulSky);
+	// add(beautifulSky);
     
-    var stars = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/stars.png');
-	stars.scrollFactor.set(0, 0);
-	stars.screenCenter();
-	stars.x = 0;
-    stars.camera = camRoom;
-    add(stars);
+	var sky = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/sky.png');
+	sky.scrollFactor.set(0, 0);
+	sky.screenCenter();
+	sky.x = 0;
+	sky.camera = camRoom;
+	add(sky);
     
     var hills = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/hills.png');
 	hills.scrollFactor.set(.5, 1);
+	hills.setGraphicSize(hills.width + 40, hills.height);
+	hills.updateHitbox();
 	hills.screenCenter();
-	hills.x = 0;
+	hills.x = -20;
     hills.camera = camRoom;
     add(hills);
     
 	var ground = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/ground.png');
-	ground.scrollFactor.set(.8, 1);
+	ground.scrollFactor.set(.87, 1);
+	ground.setGraphicSize(ground.width + 40, ground.height);
+	ground.updateHitbox();
 	ground.screenCenter();
 	ground.x = 0;
 	ground.camera = camRoom;
@@ -32,19 +36,15 @@ function create(lastRoom:String):Void
 
 	var house = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/house.png');
 	house.scrollFactor.set(.87, 1);
+	house.setGraphicSize(house.width + 40, house.height);
+	house.updateHitbox();
 	house.screenCenter();
 	house.x = 0;
 	house.camera = camRoom;
 	add(house);
 
-	var garage = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/garage.png');
-	garage.scrollFactor.set(.9, 1);
-	garage.screenCenter();
-	garage.x = 0;
-	garage.camera = camRoom;
-	add(garage);
-
 	var meicar = new FlxSprite().loadGraphic('assets/images/rooms/intro_housefront/meicar.png');
+	meicar.scrollFactor.set(1.3, 1);
 	meicar.screenCenter();
 	meicar.x = 0;
 	meicar.camera = camRoom;
@@ -64,5 +64,5 @@ function create(lastRoom:String):Void
         });
     });
     
-	FlxTween.tween(camRoom.scroll, {x: 450}, 6, {ease: FlxEase.quartInOut});
+	FlxTween.tween(camRoom.scroll, {x: 35}, 6, {ease: FlxEase.quartInOut});
 }
