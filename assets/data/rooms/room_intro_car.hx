@@ -2,7 +2,7 @@ var leaving:Bool = false;
 var carWindow:FlxSprite;
 
 function create(lastRoom:String):Void
-{    
+{    	
 	FlxG.sound.playMusic('assets/sounds/rooms/cardriving.ogg', 0);
 	FlxG.sound.music.fadeIn(3, 0, .7);
     
@@ -35,7 +35,7 @@ function create(lastRoom:String):Void
     doTransition('fade', 'in', 3, function():Void{
 		dialogueBox.loadDialogueFiles(['intro/dia_intro_carscene']);
 		dialogueBox.openBox();
-        
+
         PlayState.dialogueOnComplete = function():Void{
 			leaving = true;
 			FlxG.sound.music.fadeOut(3, 0);

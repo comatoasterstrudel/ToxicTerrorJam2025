@@ -47,6 +47,8 @@ class PlayState extends FlxState
 	
 	public static var dialogueOnComplete:Void->Void = null;
 	
+	var localEvents:Array<String->Void> = [];
+	
 	override public function create()
 	{
 		super.create();
@@ -87,6 +89,10 @@ class PlayState extends FlxState
 				case 'fadeMusic': // duration, volume
 					FlxG.sound.music.fadeIn(Std.parseFloat(eventSplit[1]), FlxG.sound.music.volume, Std.parseFloat(eventSplit[2]));
 			}
+			for (i in localEvents)
+			{
+				i(eventName);
+			}
 		};
 
 		cutsceneFrame = new CutsceneFrame();
@@ -103,6 +109,8 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+		if (roomScript != null)
+			roomScript.executeFunc('update', [elapsed]);
 	}
 
 	/**
@@ -128,10 +136,13 @@ class PlayState extends FlxState
 		roomScript.setVariable('camDialogue', camDialogue);
 
 		roomScript.setVariable('dialogueBox', dialogueBox);
+		roomScript.setVariable('cutsceneFrame', cutsceneFrame);
 
 		roomScript.setVariable('changeRoom', changeRoom);
 		roomScript.setVariable('doTransition', doTransition);
 
+		roomScript.setVariable('addLocalEvent', addLocalEvent);
+		
 		roomScript.executeFunc('create', [lastRoom]);
 	}
 
@@ -189,5 +200,9 @@ class PlayState extends FlxState
 		lastRoom = curRoom;
 		curRoom = newRoom;
 		trace('Loaded new room! $newRoom Last room: $lastRoom');
+	}
+	function addLocalEvent(event:String->Void):Void
+	{
+		localEvents.push(event);
 	}
 }

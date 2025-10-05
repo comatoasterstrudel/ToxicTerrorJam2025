@@ -98,6 +98,14 @@ class MainMenuState extends FlxState
 			}
 		});
 		menuOptions.push({
+			name: "Dbg: house entrance scene",
+			selectedFunction: function():Void
+			{
+				PlayState.loadRoom('intro_houseentrance');
+				FlxG.switchState(new PlayState());
+			}
+		});
+		menuOptions.push({
 			name: "Dbg: test interactables",
 			selectedFunction: function():Void
 			{

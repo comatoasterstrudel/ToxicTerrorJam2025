@@ -1,5 +1,20 @@
+var garageDoorSoundDone:Bool = false;
+var readyToLeave:Bool = false;
+var leaving:Bool = false;
+
 function create(lastRoom:String):Void
 {
+	addLocalEvent(function(event:String):Void
+	{
+		if (event == 'startGarageDoorTimer')
+		{
+			new FlxTimer().start(2.5, function(f):Void
+			{
+				garageDoorSoundDone = true;
+			});
+		}
+	});
+	
 	FlxG.sound.play('assets/sounds/rooms/cardoorclose.ogg', 1);
 
 	new FlxTimer().start(2.3, function(f):Void
@@ -60,12 +75,30 @@ function create(lastRoom:String):Void
 
 					PlayState.dialogueOnComplete = function():Void
 					{
-						changeRoom('test_placeholder', 'none', 0);
+						cutsceneFrame.hideFrame();
+						readyToLeave = true;
 					};
 				});
 			});
 		});
 
 		FlxTween.tween(camRoom.scroll, {x: 35}, 6, {ease: FlxEase.quartInOut});
+	});
+}
+function update(elapsed:Float)
+{
+	if (garageDoorSoundDone && readyToLeave && !leaving)
+	{
+		leaveRoom();
+	}
+}
+
+function leaveRoom()
+{
+	leaving = true;
+
+	new FlxTimer().start(1, function(f):Void
+	{
+		changeRoom('intro_houseentrance', 'none', 0);
 	});
 }

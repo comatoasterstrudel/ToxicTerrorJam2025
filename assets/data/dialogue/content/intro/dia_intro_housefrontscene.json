@@ -74,7 +74,7 @@
 		"speed": 0.03,
 		"dialogue": "I brush it off and make my way into the garage, the sound of my footsteps echoing off the tin walls.",
 		"actor": "xiaomei",
-		"events": ["fadeMusic_1.5_0", "playSound_assets/sounds/rooms/entergarage.ogg", "hideFrame"]
+		"events": ["fadeMusic_1.5_0", "playSound_assets/sounds/rooms/entergarage.ogg", "changeFrame_garage_nothing"]
 	},
 	{
 		"speed": 0.03,
@@ -127,6 +127,6 @@
 		"speed": 0.03,
 		"dialogue": "The door opens with a click and I push it open. It's surprisingly heavier than I remember.",
 		"actor": "xiaomei",
-		"events": ["playSound_assets/sounds/rooms/garagebackdooropen.ogg"]
+		"events": ["playSound_assets/sounds/rooms/garagebackdooropen.ogg", "startGarageDoorTimer"]
 	}
 ]
