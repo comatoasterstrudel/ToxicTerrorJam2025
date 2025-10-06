@@ -41,6 +41,22 @@ class InitState extends FlxState
 		// preload the font really quick so you dont have to do it later
 		CtDialogueBox.preloadFont(CtDialogueBox.defaultSettings.font, CtDialogueBox.defaultSettings.fontSize);
 		
+		// preload dialogue assets since theyre commonly used and i would like the game to be smooth. sorry for extra ram usage?
+		for (i in Utilities.findFilesInPath('assets/images/dialogue/', ['.png'], true, true))
+		{
+			var graphic:FlxGraphic = FlxGraphic.fromAssetKey(i, false, null, true);
+			if (graphic == null)
+			{
+				FlxG.log.warn('Texture is Null: ' + i);
+			}
+			else
+			{
+				trace('Cached Texture: ' + i);
+
+				graphic.persist = true;
+			}
+		}	
+		
 		// fullscreen if necessary
 		#if startFullScreen
 		FlxG.fullscreen = true;

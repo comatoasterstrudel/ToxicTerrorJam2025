@@ -6,7 +6,7 @@
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "It feels surreal. I haven't been inside this house since I left for college. It feels like stepping into a memory. where you've gotten older, but your surroundings are the same.",
+		"dialogue": "It feels surreal. I haven't been inside this house since I left for college. It feels like stepping into a memory where you've gotten older, but your surroundings are the same.",
 		"actor": "xiaomei"
 	},
 	{
@@ -58,5 +58,17 @@
 		"speed": 0.03,
 		"dialogue": "I walk through the threshold between the kitchen and the rest of the house, going to investigate the stair light and hopefully find Elly and Octavia.",
 		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "\"Hey...? Elly? You around...?\"",
+		"actor": "xiaomei",
+		"portrait": "neutral"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": " I call out, hoping she's distracted with something but didn't hear me come in.",
+		"actor": "xiaomei",
+		"continueLine": true
 	}
 ]

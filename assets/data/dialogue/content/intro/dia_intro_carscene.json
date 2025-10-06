@@ -3,112 +3,134 @@
 		"speed": 0.03,
 		"dialogue": "I'm sure she's fine, Elly. She's probably just being anti-social.",
 		"actor": "xiaomei",
-		"portrait": "neutral"
+		"portrait": "groan"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "She did this when we were kids too.",
 		"actor": "xiaomei",
-		"portrait": "neutral"
+		"portrait": "groan"
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "yeah, maybe but... She hasn't messaged me back for a week, and it's worrying me.",
+		"dialogue": "yeah, maybe but...",
 		"actor": "elianna",
-		"portrait": "neutral",
+		"portrait": "frown",
 		"events": ["changeFrame_car_phone"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "She hasn't messaged me back for a week, and it's worrying me.",
+		"actor": "elianna",
+		"continueLine": true,
+		"portrait": "frownsad"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "She's been good with messaging and calling for the past year.",
 		"actor": "elianna",
-		"portrait": "neutral"
+		"portrait": "frownsadmouthopen"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "I mean, I've been gone for a month and I don't know what she's been up to and I...",
 		"actor": "elianna",
-		"portrait": "neutral"
+		"portrait": "lookaway"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "I just don't want something bad to happen.",
 		"actor": "elianna",
-		"portrait": "neutral"
+		"portrait": "lookawaymouthopen"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "What do you think will happen?",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "groanmad",
 		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "...",
 		"actor": "elianna",
-		"portrait": "neutral",
+		"portrait": "frownsad",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "It... it could really be anything! She's not always in her right mind, you know?",
 		"actor": "elianna",
-		"portrait": "neutral"
+		"portrait": "frownsadmouthopen"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "yeah, I know.",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "neutralmouthopen",
 		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Oh come on, don't say it like that.",
 		"actor": "elianna",
-		"portrait": "neutral",
+		"portrait": "mad",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Like what?",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "mad",
 		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "You're being bitchy about it.",
 		"actor": "elianna",
-		"portrait": "neutral",
+		"portrait": "mad",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "I'm not being bitchy! I just-",
+		"dialogue": "I'm not being bitchy!",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "groanmad",
 		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "She's MY mom, Mei. I care about her and if something happened while I was away I would be inconsolable.",
+		"dialogue": " I just-",
+		"actor": "xiaomei",
+		"portrait": "lookingaway",
+		"continueLine": true
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "She's MY mom, Mei.",
 		"actor": "elianna",
-		"portrait": "neutral",
+		"portrait": "madmouthopen",
+		"events": ["changeFrame_car_phone"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": " I care about her and if something happened while I was away I would be inconsolable.",
+		"actor": "elianna",
+		"portrait": "lookaway",
+		"continueLine": true,
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Especially since I'm the only one who's been keeping an eye on her.",
 		"actor": "elianna",
-		"portrait": "neutral"
+		"portrait": "lookawaymouthopen"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "Okay, okay, I'll be down there in 2 hours.",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "neutralmouthopen",
 		"events": ["hideFrame"]
 	},
 	{
@@ -128,27 +150,27 @@
 		"speed": 0.03,
 		"dialogue": "I could make us some homemade deep dish pizza, like mom did for us when we were little!",
 		"actor": "elianna",
-		"portrait": "neutral"
+		"portrait": "neutralmouthopen"
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "heh... I don't know if you'll be as good as Octavia on that front.",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "confident",
 		"events": ["hideFrame"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "ohhh shut up!! I'm hanging up now, love you.",
 		"actor": "elianna",
-		"portrait": "neutral",
+		"portrait": "blush",
 		"events": ["changeFrame_car_phone"]
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "yep, love you too.",
 		"actor": "xiaomei",
-		"portrait": "neutral",
+		"portrait": "smile",
 		"events": ["hideFrame"]
 	}
 ]
