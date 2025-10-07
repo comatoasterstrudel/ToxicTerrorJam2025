@@ -161,7 +161,7 @@
 		"speed": 0.03,
 		"dialogue": "I turn around to go up the stairs-   ",
 		"actor": "xiaomei",
-		"autoskip": true
+		"autoSkip": true
 	},
 	{
 		"speed": 0.03,
