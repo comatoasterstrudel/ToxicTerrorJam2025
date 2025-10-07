@@ -70,5 +70,11 @@
 		"dialogue": " I call out, hoping she's distracted with something but didn't hear me come in.",
 		"actor": "xiaomei",
 		"continueLine": true
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "No response.",
+		"actor": "xiaomei",
+		"portrait": "neutral"
 	}
 ]
