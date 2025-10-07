@@ -73,8 +73,216 @@
 	},
 	{
 		"speed": 0.03,
+		"dialogue": "...",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
 		"dialogue": "No response.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "My heart skips a beat, a lurching feeling of unease striking my stomach.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "There could be a million reasons as to why she's not answering.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Maybe she left to go grab something from the gas station down the way. Maybe her and Octavia were invited to dinner by a neighbor.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Hell, maybe they even went bowling or some shit.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "With a prick of anxiety in my chest, I looked around to look for anything out of place, showing that the two were out of the house.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Shoes, coats, keys, etcetera but nothing. Everything was in its right spot where it had always been.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "They had to be home. But where, the downstairs lounge?",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I looked down the lower staircase, into the dark abyss they laid at the bottom of it.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I stared into it for a moment, trying to fixate on anything in the dark, but it was a fruitless venture.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I shake my hands nervously, that pang of anxiety rising inside me.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Realistically they are fine. The likelihood something bad happened is relatively low, especially in the middle of the suburbs out of the city.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "You know what? They're probably asleep.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Yeah Elly is probably just taking a rest after the long drive and Octavia is older, so maybe she goes to sleep early?",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": " ...6pm early?",
 		"actor": "xiaomei",
-		"portrait": "neutral"
+		"continueLine": true
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Here how about I go upstairs and check, just to make sure.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I turn around to go up the stairs-   ",
+		"actor": "xiaomei",
+		"autoskip": true
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "",
+		"events": ["changeFrame_housestaircase_stairmonster"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Something shrouded in darkness lies at the top of the steps. Its body blends in with the overconsuming shadows but I can see its head.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "An estimation of a human face painted on shining porcelain.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It's cracked, shards falling away to expose a writhing mass of something in its skull.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It oozes, drops of some sort of sludge falling from the wound.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": " I don't think you could call it blood.",
+		"actor": "xiaomei",
+		"continueLine": true
+	},
+	{
+		"speed": 0.07,
+		"dialogue": "Hhhksssgg...Hhhksssgg...Hhhksssgg...",
+		"actor": "monster"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It makes sounds similar to the cries of cicadas. Repetitive, loud, and overconsuming. The sounds go in and out, like belabord breathing.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It looks at me, not moving from its location, like it's sizing me up, but I don't know what for. I can't know what for.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.07,
+		"dialogue": "W...wh...",
+		"actor": "monster"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I instinctively step back, flight kicking in.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "My movement sets something off in the creature.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It reaches out a shaky arm, the same porcelain as its face. Then it moves a large leg forward from the shadows. It's angled strangely, contorted to what looks like a bug leg.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "It's covered in large, bristly hairs and sports two sharp claws at the end.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "When I look back up to its face, I barely have time to react before it starts moving faster. It lunges at me.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "Muscle memory takes me downstairs, practically jumping over the steps to reach the basement.",
+		"actor": "xiaomei",
+		"events": ["hideFrame"]
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I can hear the monster's loud cries as it shambles after me, its head lulling atop its writhing body, beetles crawling out from its cracked skull.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I ran across the basement, bashing my side into the old piano they kept down there.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I stumbled from the pain but I kept my dash, I couldn't see the creature anymore but I could hear it. Its scuttling resounded alongside the vibrations of its heavy foot, if you could even call them that, steps.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "In the darkness I swiftly reach for the door I remember being there. With quick, shaking hands I grasp the doorknob and twist it open, throwing my body inside.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "As I try to close the door, one of the creature's disgusting insect legs breaches the threshold, trying to keep it open.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "My nerves and muscles steel for their own survival as I pull close the door, fighting against the monster's own strength.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "After a moment of struggle, the monster gives out and I slam the door shut, its gargantuan leg severing off from its body.",
+		"actor": "xiaomei"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "I can hear it scream from outside the door as I collapse onto the ground. It's blood-curdling and disgusting, like the sound when you yell with thick, coagulated mucus in your throat.",
+		"actor": "xiaomei"
 	}
 ]

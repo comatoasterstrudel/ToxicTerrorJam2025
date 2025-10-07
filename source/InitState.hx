@@ -17,7 +17,7 @@ class InitState extends FlxState
 		
 		// set the dialogue box style
 		CtDialogueBox.defaultSettings = {
-			fontSize: 40,
+			fontSize: 35,
 			nameBoxFontSize: 50,
 			textColor: FlxColor.WHITE,
 			textRows: 7,

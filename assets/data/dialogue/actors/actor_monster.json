@@ -1,0 +1,10 @@
+{
+    "name": "monster",
+	"vanityName": "???",
+	"textColor": [255, 255, 255],
+	"nameBoxTextColor": [255, 255, 255],
+	"portraitPrefix": "monster",
+	"portraitRight": true,
+	"customNameBoxImgPath": "monster",
+	"textSound": "monster"
+}

@@ -20,7 +20,7 @@
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "She hasn't messaged me back for a week, and it's worrying me.",
+		"dialogue": " She hasn't messaged me back for a week, and it's worrying me.",
 		"actor": "elianna",
 		"continueLine": true,
 		"portrait": "frownsad"
