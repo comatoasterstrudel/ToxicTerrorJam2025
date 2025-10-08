@@ -127,6 +127,13 @@ class MainMenuState extends FlxState
 				FlxG.switchState(new PlayState());
 			}
 		});
+		menuOptions.push({
+			name: "Dbg: get item list",
+			selectedFunction: function():Void
+			{
+				trace(Items.getItemList());
+			}
+		});
 		#end
 		
 		menuTexts = new FlxSpriteGroup();
