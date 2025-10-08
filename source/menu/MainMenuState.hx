@@ -1,7 +1,5 @@
 package menu;
 
-import flixel.group.FlxSpriteGroup;
-
 /**
  * this is the class that holds the main menu.
  */
@@ -15,7 +13,9 @@ class MainMenuState extends FlxState
 			name: "Start Game",
 			selectedFunction: function():Void
 			{
-				PlayState.loadRoom('intro_car');
+				SaveData.resetSaveData();
+				SaveData.startedGame = true;
+				PlayState.loadRoom(Constants.FIRST_ROOM);
 				FlxG.switchState(new PlayState());
 			}
 		},
@@ -23,7 +23,15 @@ class MainMenuState extends FlxState
 			name: "Load Game",
 			selectedFunction: function():Void
 			{
-				FlxG.switchState(new PlayState());
+				if (SaveData.startedGame)
+				{
+					PlayState.loadRoom(SaveData.savedCurRoom, SaveData.savedLastRoom);
+					FlxG.switchState(new PlayState());
+				}
+				else
+				{
+					trace('Cant Continue. You havent even started!!');
+				}
 			}
 		},
 		{
@@ -33,7 +41,14 @@ class MainMenuState extends FlxState
 				trace('we made it ahah');
 			}
 		},
-		#if windows
+		{
+			name: "Reset Save Data",
+			selectedFunction: function():Void
+			{
+				SaveData.resetSaveData();
+				FlxG.resetState();
+			}
+		},
 		{
 			name: "Quit",
 			selectedFunction: function():Void
@@ -41,7 +56,6 @@ class MainMenuState extends FlxState
 				Sys.exit(0);
 			}
 		},
-		#end
 	];
 
 	/**
@@ -125,6 +139,8 @@ class MainMenuState extends FlxState
 			var menuText = new FlxText(10, gameLogo.y + gameLogo.height + (40 * i), 0, menuOption.name, 16);
 			menuText.ID = i;
 			menuTexts.add(menuText);
+			if (menuOption.name == "Load Game" && !SaveData.startedGame)
+				menuText.color = FlxColor.GRAY; // i know this is jank suck my cock ernie keebler
 		}
 	}
 
@@ -133,8 +149,8 @@ class MainMenuState extends FlxState
 		super.update(elapsed);
 		for (i in menuTexts)
 		{
-			if (FlxG.mouse.overlaps(i))
-			{
+			if (FlxG.mouse.overlaps(i) && i.color == FlxColor.WHITE)
+			{ 
 				i.alpha = 1;
 				if (FlxG.mouse.justReleased)
 				{

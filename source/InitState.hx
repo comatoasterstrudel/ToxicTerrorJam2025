@@ -34,6 +34,9 @@ class InitState extends FlxState
 			portraitOffsetRight: new FlxPoint(380, -100),
 			pressedAcceptFunction: function():Bool
 			{
+				#if debug
+				return (FlxG.mouse.justReleased || FlxG.keys.justReleased.ENTER);
+				#end
 				return FlxG.mouse.justReleased;
 			}
 		};
@@ -61,6 +64,9 @@ class InitState extends FlxState
 		#if startFullScreen
 		FlxG.fullscreen = true;
 		#end
+		
+		// load save data
+		SaveData.loadGame();
 		
 		new FlxTimer().start(.1, function(f):Void{
 			leave();			

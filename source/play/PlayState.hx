@@ -225,12 +225,16 @@ class PlayState extends FlxState
 	/**
 	 * call this to load a new room
 	 * @param newRoom the room to load
+	 * @param lastRoom you can set the last room too, if you need
 	 */
-	public static function loadRoom(newRoom:String):Void
+	public static function loadRoom(newRoom:String, ?lastRoom:String):Void
 	{
-		lastRoom = curRoom;
+		lastRoom = lastRoom ?? curRoom;
 		curRoom = newRoom;
 		trace('Loaded new room! $newRoom Last room: $lastRoom');
+		SaveData.savedCurRoom = curRoom;
+		SaveData.savedLastRoom = lastRoom;
+		SaveData.saveGame();
 	}
 	function addLocalEvent(event:String->Void):Void
 	{
