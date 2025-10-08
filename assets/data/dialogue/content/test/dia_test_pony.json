@@ -8,6 +8,7 @@
 	{
 		"speed": 0.03,
 		"dialogue": "oh the collision works properly, thats good",
-		"actor": "elianna"
+		"actor": "elianna",
+		"portrait": "neutral"
 	}
 ]
