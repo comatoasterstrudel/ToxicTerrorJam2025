@@ -158,15 +158,15 @@
 		"actor": "xiaomei"
 	},
 	{
-		"speed": 0.03,
-		"dialogue": "I turn around to go up the stairs-                        ",
+		"speed": 0.04,
+		"dialogue": "I turn around to go up the stairs-   ",
 		"actor": "xiaomei",
 		"autoSkip": true
 	},
 	{
 		"speed": 0.03,
 		"dialogue": "",
-		"events": ["changeFrame_housestaircase_stairmonster"]
+		"events": ["changeFrame_housestaircase_stairmonster", "fadeMusic_0.001_0", "playSound_assets/sounds/rooms/scarystair.ogg", "shakeDialogueBox_0.2_0.23"]
 	},
 	{
 		"speed": 0.03,
@@ -243,7 +243,7 @@
 		"speed": 0.03,
 		"dialogue": "Muscle memory takes me downstairs, practically jumping over the steps to reach the basement.",
 		"actor": "xiaomei",
-		"events": ["hideFrame"]
+		"events": ["changeFrame_void_nothing", "playSound_assets/sounds/rooms/movement.ogg"]
 	},
 	{
 		"speed": 0.03,
@@ -253,7 +253,8 @@
 	{
 		"speed": 0.03,
 		"dialogue": "I ran across the basement, bashing my side into the old piano they kept down there.",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/pianohurt.ogg"]
 	},
 	{
 		"speed": 0.03,
@@ -262,13 +263,20 @@
 	},
 	{
 		"speed": 0.03,
-		"dialogue": "In the darkness I swiftly reach for the door I remember being there. With quick, shaking hands I grasp the doorknob and twist it open, throwing my body inside.",
+		"dialogue": "In the darkness I swiftly reach for the door I remember being there.",
 		"actor": "xiaomei"
 	},
 	{
 		"speed": 0.03,
+		"dialogue": "With quick, shaking hands I grasp the doorknob and twist it open, throwing my body inside.",
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/dooropenahh.ogg"]
+	},
+	{
+		"speed": 0.03,
 		"dialogue": "As I try to close the door, one of the creature's disgusting insect legs breaches the threshold, trying to keep it open.",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/doorslamsquisher.ogg"]
 	},
 	{
 		"speed": 0.03,
@@ -278,7 +286,8 @@
 	{
 		"speed": 0.03,
 		"dialogue": "After a moment of struggle, the monster gives out and I slam the door shut, its gargantuan leg severing off from its body.",
-		"actor": "xiaomei"
+		"actor": "xiaomei",
+		"events": ["playSound_assets/sounds/rooms/doorcutoff.ogg"]
 	},
 	{
 		"speed": 0.03,

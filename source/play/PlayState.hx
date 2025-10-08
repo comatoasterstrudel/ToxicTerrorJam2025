@@ -96,6 +96,8 @@ class PlayState extends FlxState
 					FlxG.sound.play(eventSplit[1]);
 				case 'fadeMusic': // duration, volume
 					FlxG.sound.music.fadeIn(Std.parseFloat(eventSplit[1]), FlxG.sound.music.volume, Std.parseFloat(eventSplit[2]));
+				case 'shakeDialogueBox': // intensity, duration
+					camDialogue.shake(Std.parseFloat(eventSplit[1]), Std.parseFloat(eventSplit[2]), null, true, X);
 			}
 			for (i in localEvents)
 			{
