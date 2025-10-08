@@ -45,6 +45,10 @@ class PlayState extends FlxState
 	 */
 	var cutsceneFrame:CutsceneFrame;
 	
+	var cursor:FlxSprite;
+
+	var interactableObjects:FlxTypedGroup<InteractableObject>;
+	
 	public static var dialogueOnComplete:Void->Void = null;
 	
 	var localEvents:Array<String->Void> = [];
@@ -64,6 +68,10 @@ class PlayState extends FlxState
 		camDialogue.bgColor = FlxColor.TRANSPARENT;
 		FlxG.cameras.add(camDialogue, false);
 
+		interactableObjects = new FlxTypedGroup<InteractableObject>();
+		interactableObjects.camera = camRoom;
+		add(interactableObjects);
+		
 		dialogueOnComplete = null;
 
 		var trueSettings = CtDialogueBox.defaultSettings;
@@ -103,11 +111,28 @@ class PlayState extends FlxState
 		dialogueBox.camera = camDialogue;
 		add(dialogueBox);
 
+		cursor = new FlxSprite().makeGraphic(5, 5, FlxColor.RED);
+		cursor.camera = camTransition;
+		cursor.visible = false;
+		add(cursor);
+		
 		loadScript();
 	}
 
 	override public function update(elapsed:Float)
 	{
+		cursor.setPosition(FlxG.mouse.getPosition().x - cursor.width / 2, FlxG.mouse.getPosition().y - cursor.height / 2);
+		for (i in interactableObjects.members)
+		{
+			if (dialogueBox.open)
+			{
+				i.interactable = false;
+			}
+			else
+			{
+				i.interactable = true;
+			}
+		}
 		super.update(elapsed);
 		if (roomScript != null)
 			roomScript.executeFunc('update', [elapsed]);
@@ -142,6 +167,10 @@ class PlayState extends FlxState
 		roomScript.setVariable('doTransition', doTransition);
 
 		roomScript.setVariable('addLocalEvent', addLocalEvent);
+		
+		roomScript.setVariable('cursor', cursor);
+
+		roomScript.setVariable('interactableObjects', interactableObjects);
 		
 		roomScript.executeFunc('create', [lastRoom]);
 	}

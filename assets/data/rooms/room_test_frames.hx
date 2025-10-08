@@ -1,5 +1,5 @@
 function create(lastRoom:String):Void
 {
-    dialogueBox.loadDialogueFiles(['test/dia_frame']);
+	dialogueBox.loadDialogueFiles(['test/dia_test_frame']);
     dialogueBox.openBox();
 }

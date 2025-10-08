@@ -1,0 +1,13 @@
+[
+	{
+		"speed": 0.03,
+		"dialogue": "OMG ITS A PONY!",
+		"actor": "xiaomei",
+		"portrait": "neutral"
+	},
+	{
+		"speed": 0.03,
+		"dialogue": "oh the collision works properly, thats good",
+		"actor": "elianna"
+	}
+]
