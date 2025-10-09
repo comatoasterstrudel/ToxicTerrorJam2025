@@ -6,6 +6,11 @@ package play;
 class PlayState extends FlxState
 {
 	/**
+	 * are you playing the game in story mode ? this only really matters in debug mode lol
+	 */
+	public static var storyMode:Bool = true;
+	
+	/**
 	 * which room is currently loaded and will be played when this state is opened
 	 */
 	public static var curRoom:String = 'test_placeholder';
@@ -288,10 +293,16 @@ class PlayState extends FlxState
 		lastRoom = lastRoom ?? curRoom;
 		curRoom = newRoom;
 		trace('Loaded new room! $newRoom Last room: $lastRoom');
+		if (!storyMode)
+			return;
 		SaveData.savedCurRoom = curRoom;
 		SaveData.savedLastRoom = lastRoom;
 		SaveData.saveGame();
 	}
+	/**
+	 * call this to add a local event to the dialogue box
+	 * @param event 
+	 */
 	function addLocalEvent(event:String->Void):Void
 	{
 		localEvents.push(event);

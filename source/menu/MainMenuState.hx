@@ -10,9 +10,10 @@ class MainMenuState extends FlxState
 	 */
 	var menuOptions:Array<MainMenuOption> = [
 		{
-			name: "Start Game",
+			name: "New Game",
 			selectedFunction: function():Void
 			{
+				PlayState.storyMode = true;
 				SaveData.resetSaveData();
 				SaveData.startedGame = true;
 				PlayState.loadRoom(Constants.FIRST_ROOM);
@@ -23,6 +24,8 @@ class MainMenuState extends FlxState
 			name: "Load Game",
 			selectedFunction: function():Void
 			{
+				PlayState.storyMode = true;
+
 				if (SaveData.startedGame)
 				{
 					PlayState.loadRoom(SaveData.savedCurRoom, SaveData.savedLastRoom);
@@ -102,6 +105,8 @@ class MainMenuState extends FlxState
 			name: "Dbg: Test Frame Room",
 			selectedFunction: function():Void
 			{
+				PlayState.storyMode = false;
+
 				PlayState.loadRoom('test_frames');
 				FlxG.switchState(new PlayState());
 			}
@@ -110,6 +115,8 @@ class MainMenuState extends FlxState
 			name: "Dbg: front of house scene",
 			selectedFunction: function():Void
 			{
+				PlayState.storyMode = false;
+				
 				PlayState.loadRoom('intro_housefront');
 				FlxG.switchState(new PlayState());
 			}
@@ -118,6 +125,8 @@ class MainMenuState extends FlxState
 			name: "Dbg: house entrance scene",
 			selectedFunction: function():Void
 			{
+				PlayState.storyMode = false;
+				
 				PlayState.loadRoom('intro_houseentrance');
 				FlxG.switchState(new PlayState());
 			}
@@ -126,6 +135,8 @@ class MainMenuState extends FlxState
 			name: "Dbg: test interactables",
 			selectedFunction: function():Void
 			{
+				PlayState.storyMode = false;
+				
 				PlayState.loadRoom('test_interactables');
 				FlxG.switchState(new PlayState());
 			}
@@ -135,6 +146,10 @@ class MainMenuState extends FlxState
 			selectedFunction: function():Void
 			{
 				trace(Items.getItemList());
+				for (i in Items.getItemList())
+				{
+					trace(new ItemData(i).vanityName);
+				}
 			}
 		});
 		#end

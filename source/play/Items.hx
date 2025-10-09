@@ -12,4 +12,11 @@ class Items
     public static function getItemList():Array<String>{
         return Utilities.getListFromArray(Utilities.dataFromTextFile('assets/data/items/itemList.txt'));
     }
+	public static function unlockItem(itemName:String):Void
+	{
+		if (!getItemList().contains(itemName))
+			return;
+
+		SaveData.unlockedItems.set(itemName, true);
+	}
 }
