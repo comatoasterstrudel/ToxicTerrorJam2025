@@ -10,7 +10,7 @@
     {
       "name": "flixel",
       "type": "haxelib",
-      "version": "5.8.0"
+      "version": "6.1.0"
     },
     {
       "name": "flixel-addons",
@@ -31,11 +31,6 @@
       "name": "hxcpp-debug-server",
       "type": "haxelib",
       "version": "1.2.4"
-    },
-    {
-      "name": "lime",
-      "type": "haxelib",
-      "version": "8.2.2"
     },
     {
       "name": "list",
