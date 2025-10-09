@@ -36,6 +36,26 @@ class PlayState extends FlxState
 	var camDialogue:FlxCamera;
 
 	/**
+	 * the camera that tints the game red when you hold right click or whatever
+	 */
+	var camExit:FlxCamera;
+
+	/**
+	 * the sprite that tints the screen
+	 */
+	var exitSprite:FlxSprite;
+
+	/**
+	 * how long youve been holding the exit button
+	 */
+	var exitProgress:Float = 0;
+
+	/**
+	 * how long you have to hold the exit button to leave
+	 */
+	final exitMax:Float = 4;
+	
+	/**
 	 * the dialogue box!! it plays.. dialogue!!
 	 */
 	var dialogueBox:CtDialogueBox;
@@ -45,12 +65,24 @@ class PlayState extends FlxState
 	 */
 	var cutsceneFrame:CutsceneFrame;
 	
+	/**
+	 * the sprite used to handle pixel perfect mouse detection
+	 */
 	var cursor:FlxSprite;
 
+	/**
+	 * the list of objects you can interact with in a room
+	 */
 	var interactableObjects:FlxTypedGroup<InteractableObject>;
 	
+	/**
+	 * you can change this function to determine what happens when you exit a dialogue
+	 */
 	public static var dialogueOnComplete:Void->Void = null;
 	
+	/**
+	 * you can change this to determine what happens when an event is fired
+	 */
 	var localEvents:Array<String->Void> = [];
 	
 	override public function create()
@@ -68,6 +100,15 @@ class PlayState extends FlxState
 		camDialogue.bgColor = FlxColor.TRANSPARENT;
 		FlxG.cameras.add(camDialogue, false);
 
+		camExit = new FlxCamera();
+		camExit.bgColor = FlxColor.TRANSPARENT;
+		FlxG.cameras.add(camExit, false);
+
+		exitSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.RED);
+		exitSprite.alpha = 0;
+		exitSprite.camera = camExit;
+		add(exitSprite);
+		
 		interactableObjects = new FlxTypedGroup<InteractableObject>();
 		interactableObjects.camera = camRoom;
 		add(interactableObjects);
@@ -138,6 +179,21 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		if (roomScript != null)
 			roomScript.executeFunc('update', [elapsed]);
+		if (FlxG.mouse.pressedRight || FlxG.keys.pressed.ESCAPE)
+		{
+			exitProgress += elapsed;
+
+			if (exitProgress >= exitMax)
+			{
+				FlxG.switchState(new MainMenuState());
+			}
+		}
+		else
+		{
+			exitProgress = 0;
+		}
+
+		exitSprite.alpha = Utilities.lerpThing(exitSprite.alpha, (exitProgress / (exitMax - .3)), elapsed, 5);
 	}
 
 	/**

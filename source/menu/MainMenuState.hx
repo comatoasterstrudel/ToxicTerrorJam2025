@@ -76,6 +76,9 @@ class MainMenuState extends FlxState
 	override public function create()
 	{
 		super.create();
+		if (FlxG.sound.music != null)
+			FlxG.sound.music.stop();
+		
 		menuBg = new FlxSprite().loadGraphic('assets/images/menu/bg.png');
 		menuBg.setGraphicSize(FlxG.width, FlxG.height);
 		menuBg.screenCenter();
